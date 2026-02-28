@@ -95,11 +95,6 @@
     - DoorStatus
     lastSignals:
       DoorStatus: false
-  - type: InteractionPopup
-    interactSuccessString: shutter-rattle
-    messagePerceivedByOthers: shutter-rattle
-    interactSuccessSound:
-      collection: FenceRattle
   - type: BlockWeather
   # Triad - lets the shutter be interacted with even when a window/grille shares its tile (matches BaseFirelock)
   - type: WallMount
@@ -109,7 +104,10 @@
   - type: ShipRepairable
     repairTime: 3
     repairCost: 6
-
+  - type: InteractionVerbs #Triad (interactions port)
+    allowedVerbs:
+    - KnockOn
+#Triad end
 - type: entity
   id: ShuttersNormal
   parent: BaseShutter

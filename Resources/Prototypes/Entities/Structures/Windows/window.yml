@@ -77,11 +77,6 @@
   - type: IconSmooth
     key: walls
     base: window
-  - type: InteractionPopup
-    interactSuccessString: comp-window-knock
-    messagePerceivedByOthers: comp-window-knock
-    interactSuccessSound:
-      path: /Audio/Effects/glass_knock.ogg
   - type: Construction
     graph: Window
     node: window
@@ -98,6 +93,9 @@
   - type: ShipRepairable
     repairTime: 3
     repairCost: 3
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   parent: Window
@@ -117,6 +115,10 @@
   - type: Occluder
   - type: StaticPrice
     price: 35 # Frontier: 70<35 - TODO: material rebalance
+
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   id: WindowRCDResistant
@@ -152,11 +154,6 @@
   - type: Icon
     sprite: Structures/Windows/directional.rsi
     state: window
-  - type: InteractionPopup
-    interactSuccessString: comp-window-knock
-    messagePerceivedByOthers: comp-window-knock
-    interactSuccessSound:
-      path: /Audio/Effects/glass_knock.ogg
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -225,6 +222,9 @@
   - type: ShipRepairable
     repairTime: 2
     repairCost: 2
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   id: WindowDirectionalRCDResistant

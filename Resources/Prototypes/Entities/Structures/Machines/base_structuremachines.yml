@@ -56,6 +56,9 @@
     damageModifierSet: StructuralMetallic
   - type: Anchorable
     delay: 2
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   abstract: true

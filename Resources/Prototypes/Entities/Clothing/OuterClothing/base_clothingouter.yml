@@ -27,8 +27,14 @@
   # Goobstation edit end
   - type: Sprite
     state: icon
-  - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
-    price: 30 # Frontier
+  - type: AllowSuitStorage # DeltaV - allow suit storage for all outer clothing, no whitelist
+  - type: SlotBlocker # Floofstation
+    blocks:
+      slots:
+      - INNERCLOTHING
+      blacklist:
+        tags:
+        - ShirtlessClothing
 
 - type: entity
   abstract: true
@@ -176,27 +182,20 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
-  # Goobstation edit start
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_Goobstation/Items/handling/backpack_pickup.ogg
-      params:
-        volume: -4
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_Goobstation/Items/handling/backpack_drop.ogg
-      params:
-        volume: -4
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_Goobstation/Items/handling/backpack_drop.ogg
-      params:
-        volume: -4
-  # Goobstation edit end
-  - type: HarpyHideWings # Frontier, needed for Harpies
-  - type: StaticPrice # Frontier
-    price: 20 # Frontier
-    vendPrice: 1500 # Frontier
+  - type: HideLayerClothing
+    slots:
+    - Tail
+  - type: CosmicTransmutable # DeltaV
+    transmutesTo: ClothingOuterHardsuitCosmicCult
+    requiredGlyphType: CosmicGlyphWarding
+  - type: SlotBlocker # Floofstation
+    blocks:
+      slots:
+      - INNERCLOTHING # Only blocks torso and below, eyes, mask, etc are blocked by the helmet
+      - GLOVES # Assuming gloves are placed *underneath*
+      - LEGS
+      - FEET
+      blacklist: {} # Clear the parent blacklist
 
 - type: entity
   abstract: true
@@ -223,10 +222,20 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
-#  - type: PhysicalComposition # Frontier
-#    materialComposition: # Frontier
-#      Durathread: 100 # Frontier
-#      Cloth: 50 # Frontier
+  - type: HideLayerClothing
+    slots:
+    - Tail
+  - type: CosmicTransmutable # DeltaV
+    transmutesTo: ClothingOuterHardsuitCosmicCult
+    requiredGlyphType: CosmicGlyphWarding
+  - type: SlotBlocker # Floofstation
+    blocks:
+      slots:
+      - INNERCLOTHING # Only blocks torso and below, eyes, mask, etc are blocked by the helmet
+      - GLOVES # Assuming gloves are placed *underneath*
+      - LEGS
+      - FEET
+      blacklist: {} # Clear the parent blacklist
 
 - type: entity
   parent: ClothingOuterBase

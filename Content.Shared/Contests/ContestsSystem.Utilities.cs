@@ -1,6 +1,6 @@
-//using Content.Shared.CCVar; // Frontier
+﻿using Content.Shared._Floof.CCVar;
+using Content.Shared.CCVar;
 using Robust.Shared.Serialization;
-using CCVars = Content.Shared._EE.CCVar.EECCVars; // Frontier
 
 namespace Content.Shared.Contests;
 public sealed partial class ContestsSystem
@@ -18,7 +18,7 @@ public sealed partial class ContestsSystem
     /// </summary>
     private bool ContestClampOverride(bool bypassClamp)
     {
-        return _cfg.GetCVar(CCVars.AllowClampOverride) && bypassClamp;
+        return _cfg.GetCVar(FloofCCVars.AllowClampOverride) && bypassClamp;
     }
 
     /// <summary>
@@ -27,35 +27,38 @@ public sealed partial class ContestsSystem
     /// </summary>
     public float ContestConstructor(EntityUid user, ContestArgs args)
     {
-        if (!_cfg.GetCVar(CCVars.DoContestsSystem))
+        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem))
             return 1;
 
         if (!args.DoEveryInteraction)
-            return args.DoMassInteraction ? ((!args.MassDisadvantage
-                        ? MassContest(user, args.MassBypassClamp, args.MassRangeModifier)
-                        : 1 / MassContest(user, args.MassBypassClamp, args.MassRangeModifier))
-                            + args.MassOffset)
-                                : 1
-                    * (args.DoStaminaInteraction ? ((!args.StaminaDisadvantage
-                        ? StaminaContest(user, args.StaminaBypassClamp, args.StaminaRangeModifier)
-                        : 1 / StaminaContest(user, args.StaminaBypassClamp, args.StaminaRangeModifier))
-                            + args.StaminaOffset)
+            return args.DoMassInteraction
+                ? ((args.MassDisadvantage
+                       ? MassContest(user, args.MassBypassClamp, args.MassRangeModifier)
+                       : 1 / MassContest(user, args.MassBypassClamp, args.MassRangeModifier))
+                   + args.MassOffset)
+                : 1
+                  * (args.DoStaminaInteraction
+                      ? ((args.StaminaDisadvantage
+                             ? StaminaContest(user, args.StaminaBypassClamp, args.StaminaRangeModifier)
+                             : 1 / StaminaContest(user, args.StaminaBypassClamp, args.StaminaRangeModifier))
+                         + args.StaminaOffset)
+                      : 1)
+                  * (args.DoHealthInteraction
+                      ? ((args.HealthDisadvantage
+                             ? HealthContest(user, args.HealthBypassClamp, args.HealthRangeModifier)
+                             : 1 / HealthContest(user, args.HealthBypassClamp, args.HealthRangeModifier))
+                         + args.HealthOffset)
+                      : 1);
+                    /* * (args.DoMindInteraction ? ((args.MindDisadvantage
+                        ? MindContest(user, args.MindBypassClamp, args.MindRangeModifier)
+                        : 1 / MindContest(user, args.MindBypassClamp, args.MindRangeModifier))
+                            + args.MindOffset)
                                 : 1)
-                    * (args.DoHealthInteraction ? ((!args.HealthDisadvantage
-                        ? HealthContest(user, args.HealthBypassClamp, args.HealthRangeModifier)
-                        : 1 / HealthContest(user, args.HealthBypassClamp, args.HealthRangeModifier))
-                            + args.HealthOffset)
-                                : 1);
-                    //* (args.DoMindInteraction ? ((!args.MindDisadvantage
-                    //    ? MindContest(user, args.MindBypassClamp, args.MindRangeModifier)
-                    //    : 1 / MindContest(user, args.MindBypassClamp, args.MindRangeModifier))
-                    //        + args.MindOffset)
-                    //            : 1)
-                    //* (args.DoMoodInteraction ? ((!args.MoodDisadvantage
-                    //    ? MoodContest(user, args.MoodBypassClamp, args.MoodRangeModifier)
-                    //    : 1 / MoodContest(user, args.MoodBypassClamp, args.MoodRangeModifier))
-                    //        + args.MoodOffset)
-                    //            : 1);
+                    * (args.DoMoodInteraction ? ((args.MoodDisadvantage
+                        ? MoodContest(user, args.MoodBypassClamp, args.MoodRangeModifier)
+                        : 1 / MoodContest(user, args.MoodBypassClamp, args.MoodRangeModifier))
+                            + args.MoodOffset)
+                                : 1)*/
 
         var everyContest = EveryContest(user,
                     args.MassBypassClamp,

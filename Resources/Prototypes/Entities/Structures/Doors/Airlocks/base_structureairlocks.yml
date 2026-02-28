@@ -186,6 +186,11 @@
   - type: ShipRepairable
     repairTime: 6
     repairCost: 6
+    #Triad (interactions port)
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
+    #Triad End
   placement:
     mode: SnapgridCenter
 

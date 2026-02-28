@@ -171,6 +171,9 @@
   - type: ShipRepairable
     repairTime: 3
     repairCost: 6
+  - type: InteractionVerbs # Triad (interactions port)
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   id: BaseSecureWindoor

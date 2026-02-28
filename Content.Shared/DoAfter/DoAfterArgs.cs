@@ -231,7 +231,7 @@ public sealed partial class DoAfterArgs
         NetShowTo = entManager.GetNetEntity(ShowTo); // Goobstation - Show doAfter popup to another entity
     }
 
-    private DoAfterArgs()
+    public DoAfterArgs()
     {
     }
 
