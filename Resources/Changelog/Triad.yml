@@ -838,3 +838,10 @@ Entries:
   id: 2220
   time: '2026-05-24T00:59:01.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/105
+- author: DDrakov
+  changes:
+    - type: Fix
+      message: Fix consent saving now pls
+  id: 2221
+  time: '2026-05-24T01:16:00.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/118
