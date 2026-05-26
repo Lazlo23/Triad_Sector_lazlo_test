@@ -770,6 +770,7 @@
   - ContractorHandheldGPSBasic
   - ContractorRadioHandheld
   - ContractorNetworkConfigurator
+  - ContractorSprayPainter # Triad
   - ContractorHandheldHealthAnalyzerUnpowered
   - ContractorAnomalyScanner
   - ContractorBucket
@@ -783,8 +784,6 @@
   - ContractorBible
   - ContractorMonkeyCubeWrapped
   - ContractorKoboldCubeWrapped
-  subgroups:
-  - ContractorSprayPainter # Triad
 
 - type: loadoutGroup
   id: ContractorFun # Left Hand - 1 only
