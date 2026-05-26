@@ -917,3 +917,10 @@ Entries:
   id: 2228
   time: '2026-05-26T04:25:28.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/113
+- author: Eillyrea
+  changes:
+    - type: Add
+      message: Tajaran Leopard Tails
+  id: 2229
+  time: '2026-05-26T12:28:04.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/133
