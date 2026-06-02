@@ -1106,3 +1106,10 @@ Entries:
   id: 2251
   time: '2026-06-02T03:23:59.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/168
+- author: SketchiiArtist
+  changes:
+    - type: Tweak
+      message: Changed max description length to 2048 characters.
+  id: 2252
+  time: '2026-06-02T03:25:15.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/164
