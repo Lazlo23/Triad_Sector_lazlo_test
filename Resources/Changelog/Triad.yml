@@ -1156,3 +1156,10 @@ Entries:
   id: 2256
   time: '2026-06-02T08:00:25.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/173
+- author: Wuffindy
+  changes:
+    - type: Tweak
+      message: changed ruin tanker shield to MS-100
+  id: 2257
+  time: '2026-06-03T00:14:01.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/180
