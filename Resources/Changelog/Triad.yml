@@ -1197,3 +1197,13 @@ Entries:
   id: 2259
   time: '2026-06-03T02:38:52.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/140
+- author: rebaserHEAD
+  changes:
+    - type: Add
+      message: >-
+        Shuttle consoles can now advertise Services, Shopping, and Social,
+        tagging the ship's IFF label on the radar so others can see what it
+        offers.
+  id: 2260
+  time: '2026-06-03T22:20:03.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/183
