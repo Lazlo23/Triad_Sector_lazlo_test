@@ -27,6 +27,6 @@
   - type: ItemToggle
     onUse: false
   - type: Appearance
-  - type: Tag
+  - type: Tag # Triad
     tags:
      - FitsInBotanicalStash
