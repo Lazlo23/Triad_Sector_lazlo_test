@@ -331,16 +331,17 @@
     - type: ItemToggle
       predictable: false
     - type: Appearance
-    - type: GenericVisualizer
-      visuals:
-        enum.ToggleVisuals.Toggled:
-         back:
-            True: { visible: true }
-            False: { visible: false }
-         base:
-            True: { visible: false }
-            False: { visible: true }
-
+    #Triad removal
+   # - type: GenericVisualizer
+   #   visuals:  # temporarily removed, missing dependancy?
+   #     enum.ToggleVisuals.Toggled:
+   #      back:
+   #         True: { visible: true }
+   #         False: { visible: false }
+   #      base:
+   #         True: { visible: false }
+   #         False: { visible: true }
+#Triad end
 
 - type: entity
   id: PillowBodyWeh
@@ -367,8 +368,8 @@
     layers:
     - state: pillow_body_urist_front
       map: ["base"]
-    - state: pillow_body_urist_back
-      map: ["back"]
+ #  - state: pillow_body_urist_back        #triad removal (see above)
+ #    map: ["back"]
 
 
 - type: entity
@@ -384,5 +385,5 @@
     layers:
       - state: pillow_body_miku_front
         map: ["base"]
-      - state: pillow_body_miku_back
-        map: ["back"]
+  #   - state: pillow_body_miku_back        #triad removal (see above)
+   #    map: ["back"]
