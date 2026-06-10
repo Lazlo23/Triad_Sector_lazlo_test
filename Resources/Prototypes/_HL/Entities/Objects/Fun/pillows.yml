@@ -59,7 +59,7 @@
     openToolQualityNeeded: Slicing
     closeToolQualityNeeded: Slicing # Should probably be stitching or something if that gets added
     name: secret-stash-plushie
-  - type: HLPersistOnShipSave # Triad, plushies will save
+  - type: HLPersistOnShipSave # Triad (ship saving here)
 
 
 
@@ -333,14 +333,14 @@
     - type: Appearance
     - type: GenericVisualizer
       visuals:
-        enum.ToggleVisuals.Toggled:    
+        enum.ToggleVisuals.Toggled:
          back:
             True: { visible: true }
             False: { visible: false }
          base:
             True: { visible: false }
-            False: { visible: true }  
-         
+            False: { visible: true }
+
 
 - type: entity
   id: PillowBodyWeh
@@ -386,4 +386,3 @@
         map: ["base"]
       - state: pillow_body_miku_back
         map: ["back"]
-      
