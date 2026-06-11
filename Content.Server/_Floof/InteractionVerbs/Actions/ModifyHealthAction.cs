@@ -14,7 +14,7 @@ public sealed partial class ModifyHealthAction : InteractionAction
     /// <summary>
     ///     Floofstation - a random factor applied to the damage.
     /// </summary>
-    [DataField] public InteractionVerbPrototype.RangeSpecifier RandomFactor = new() { Min = 0.75f, Max = 1.25f };
+    //[DataField] public InteractionVerbPrototype.RangeSpecifier RandomFactor = new() { Min = 0.75f, Max = 1.25f }; // #Triad removal(build error)
 
     public override bool IsAllowed(InteractionArgs args, InteractionVerbPrototype proto, VerbDependencies deps)
     {
