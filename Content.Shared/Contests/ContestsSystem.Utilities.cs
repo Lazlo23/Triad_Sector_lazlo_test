@@ -27,7 +27,8 @@ public sealed partial class ContestsSystem
     /// </summary>
     public float ContestConstructor(EntityUid user, ContestArgs args)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem))
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem))
             return 1;
 
         if (!args.DoEveryInteraction)

@@ -37,7 +37,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float MassContest(EntityUid performerUid, bool bypassClamp = false, float rangeFactor = 1f, float otherMass = AverageMass)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || !TryComp<PhysicsComponent>(performerUid, out var performerPhysics)
             || performerPhysics.Mass == 0)
@@ -56,7 +57,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float MassContest(EntityUid? performerUid, bool bypassClamp = false, float rangeFactor = 1f, float otherMass = AverageMass)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || performerUid is null)
             return 1f;
@@ -73,7 +75,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float MassContest(PhysicsComponent performerPhysics, bool bypassClamp = false, float rangeFactor = 1f, float otherMass = AverageMass)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || performerPhysics.Mass == 0)
             return 1f;
@@ -94,7 +97,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float MassContest(EntityUid performerUid, EntityUid targetUid, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || !TryComp<PhysicsComponent>(performerUid, out var performerPhysics)
             || !TryComp<PhysicsComponent>(targetUid, out var targetPhysics)
@@ -112,7 +116,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// <inheritdoc cref="MassContest(EntityUid, EntityUid, bool, float)"/>
     public float MassContest(EntityUid performerUid, PhysicsComponent targetPhysics, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || !TryComp<PhysicsComponent>(performerUid, out var performerPhysics)
             || performerPhysics.Mass == 0
@@ -129,7 +134,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// <inheritdoc cref="MassContest(EntityUid, EntityUid, bool, float)"/>
     public float MassContest(PhysicsComponent performerPhysics, EntityUid targetUid, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || !TryComp<PhysicsComponent>(targetUid, out var targetPhysics)
             || performerPhysics.Mass == 0
@@ -146,7 +152,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// <inheritdoc cref="MassContest(EntityUid, EntityUid, bool, float)"/>
     public float MassContest(PhysicsComponent performerPhysics, PhysicsComponent targetPhysics, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoMassContests)
             || performerPhysics.Mass == 0
             || targetPhysics.InvMass == 0)
@@ -181,7 +188,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// <inheritdoc cref="StaminaContest(EntityUid, bool, float)"/>
     public float StaminaContest(StaminaComponent perfStamina, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoStaminaContests))
             return 1f;
 
@@ -199,7 +207,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float StaminaContest(EntityUid performer, EntityUid target, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoStaminaContests)
             || !TryComp<StaminaComponent>(performer, out var perfStamina)
             || !TryComp<StaminaComponent>(target, out var targetStamina))
@@ -225,7 +234,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float HealthContest(EntityUid performer, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoHealthContests)
             || !TryComp<DamageableComponent>(performer, out var damage)
             || !TryComp<MobThresholdsComponent>(performer, out var thresholdsComponent)
@@ -246,7 +256,8 @@ public sealed partial class ContestsSystem : EntitySystem
     /// </remarks>
     public float HealthContest(EntityUid performer, EntityUid target, bool bypassClamp = false, float rangeFactor = 1f)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem)
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem)
             || !_cfg.GetCVar(FloofCCVars.DoHealthContests)
             || !TryComp<DamageableComponent>(performer, out var perfDamage)
             || !TryComp<DamageableComponent>(target, out var targetDamage)
@@ -406,7 +417,8 @@ public sealed partial class ContestsSystem : EntitySystem
         float weightMood = 1f,
         bool sumOrMultiply = false)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem))
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem))
             return 1f;
 
         var weightTotal = weightMass + weightStamina + weightHealth + weightMind + weightMood;
@@ -456,7 +468,8 @@ public sealed partial class ContestsSystem : EntitySystem
         float weightMood = 1f,
         bool sumOrMultiply = false)
     {
-        if (!_cfg.GetCVar(FloofCCVars.DoContestsSystem))
+        if (true //Triad added true
+            || !_cfg.GetCVar(FloofCCVars.DoContestsSystem))
             return 1f;
 
         var weightTotal = weightMass + weightStamina + weightHealth + weightMind + weightMood;
