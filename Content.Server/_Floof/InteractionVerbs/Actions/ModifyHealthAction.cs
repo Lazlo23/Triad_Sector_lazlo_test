@@ -27,10 +27,12 @@ public sealed partial class ModifyHealthAction : InteractionAction
         return true;
     }
 
+    //#triad (interaction port)
     public override bool Perform(InteractionArgs args, InteractionVerbPrototype proto, VerbDependencies deps)
     {
-        var damage = Damage * RandomFactor.Random(deps.Random); // Floof
         return deps.EntMan.System<DamageableSystem>()
-            .TryChangeDamage(args.Target, damage, IgnoreResistance, origin: args.User); // Floof - changed Damage to damage
+            .TryChangeDamage(args.Target, Damage, IgnoreResistance, origin: args.User) is not null;
     }
 }
+//#Triad (interaction port) end
+
