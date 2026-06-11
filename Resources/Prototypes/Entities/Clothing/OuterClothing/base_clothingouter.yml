@@ -185,9 +185,11 @@
   - type: HideLayerClothing
     slots:
     - Tail
-  - type: CosmicTransmutable # DeltaV
-    transmutesTo: ClothingOuterHardsuitCosmicCult
-    requiredGlyphType: CosmicGlyphWarding
+    #Triad removal (interactions port)
+  #- type: CosmicTransmutable # DeltaV
+  #  transmutesTo: ClothingOuterHardsuitCosmicCult
+  #  requiredGlyphType: CosmicGlyphWarding
+   #Triad removal end (itneractions port) 
   - type: SlotBlocker # Floofstation
     blocks:
       slots:
@@ -225,9 +227,11 @@
   - type: HideLayerClothing
     slots:
     - Tail
-  - type: CosmicTransmutable # DeltaV
-    transmutesTo: ClothingOuterHardsuitCosmicCult
-    requiredGlyphType: CosmicGlyphWarding
+    #Triad removal (interactions port)
+  #- type: CosmicTransmutable # DeltaV
+  #  transmutesTo: ClothingOuterHardsuitCosmicCult
+  #  requiredGlyphType: CosmicGlyphWarding
+  #triad removal end
   - type: SlotBlocker # Floofstation
     blocks:
       slots:

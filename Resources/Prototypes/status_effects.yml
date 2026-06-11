@@ -11,11 +11,11 @@
 
 - type: statusEffect
   id: SlowedDown
-
+#Triad removal (interactions port)
 #This is NOT the right place to put this. KnockedDown should be part of the status effect system that was ported, however I am trying to limit my scope to just Interactions
-- type: statusEffect
-  id: KnockedDown
-
+#- type: statusEffect
+#  id: KnockedDown
+#triad end
 - type: statusEffect
   id: Jitter
   alwaysAllowed: true
