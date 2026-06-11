@@ -189,7 +189,7 @@
   #- type: CosmicTransmutable # DeltaV
   #  transmutesTo: ClothingOuterHardsuitCosmicCult
   #  requiredGlyphType: CosmicGlyphWarding
-   #Triad removal end (itneractions port) 
+   #Triad removal end (itneractions port)
   - type: SlotBlocker # Floofstation
     blocks:
       slots:
