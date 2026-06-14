@@ -359,7 +359,7 @@
   id: PillowBodyUrist
   parent: PillowBodyBase
   name: urist body pillow
-  description: looks average in every kind of way
+  description: Looks average in every kind of way. #Triad Grammar
   components:
   - type: Item
     heldPrefix: whitepillow
