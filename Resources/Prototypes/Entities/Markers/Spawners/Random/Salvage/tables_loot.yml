@@ -127,7 +127,7 @@
     - id: WristwatchGold
     - !type:NestedSelector
       tableId: RingTableCommon
-    - !type:NestedSelector
+    - !type:NestedSelector #HardLight
       tableId: PillowTableUncommon
 
 - type: entityTable
