@@ -242,12 +242,9 @@
   - ClothingOuterWinterSyndie
   - ClothingOuterWinterSyndieCap
   - BedsheetSyndie
-  - ClothingUniformJumpsuitParamedicSyndieNF # Frontier
-  - ClothingUniformJumpsuitRepairmanSyndieNF # Frontier
-  - ClothingOuterCoatSyndieCap # Frontier
-  - ClothingShoesBootsWinterSyndicate # Frontier
 
-- type: latheRecipePack # HL
+# Hardlight start -pillows
+- type: latheRecipePack 
   id: PillowsStandard
   recipes:
   - PillowSmallWhite
@@ -260,3 +257,4 @@
   - PillowSquareBlue
   - PillowSquareRed
   - PillowSquareWhite
+#hardlight end
