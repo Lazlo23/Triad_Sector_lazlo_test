@@ -69,6 +69,7 @@
   completetime: 2
   materials:
     Cloth: 200
+
 #Hardlight start -pillows
 - type: latheRecipe
   abstract: true
@@ -78,6 +79,7 @@
   materials:
     Cloth: 500
 #Hardlight end
+
 ## Recipes
 
 # Jumpsuits/skirts
@@ -939,8 +941,6 @@
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedPurple
   result: ClothingNeckScarfStripedPurple
-
-
 
 # HardLight Start - Pillows
 - type: latheRecipe

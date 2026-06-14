@@ -1,7 +1,7 @@
 - type: entity
+  abstract: true #triad  moved abstract to the top
   parent: BaseItem
   id: BasePillow
-  abstract: true
   components:
   - type: Tag
     tags:
@@ -47,7 +47,7 @@
   - type: Speech
     speechVerb: Default # for pais (In the secret stash)
   - type: SecretStash
-    secretStashName: secret-stash-plushie
+    secretStashName: secret-stash-pillow #triad secret stash rename)
     blacklist:
       components:
       - SecretStash # Prevents being able to insert plushies inside each other (infinite plush)!
@@ -58,7 +58,7 @@
   - type: ToolOpenable
     openToolQualityNeeded: Slicing
     closeToolQualityNeeded: Slicing # Should probably be stitching or something if that gets added
-    name: secret-stash-plushie
+    name: secret-stash-pillow #Triad (secret stash rename)
   - type: HLPersistOnShipSave # Triad (ship saving here)
 
 
@@ -67,7 +67,7 @@
   id: PillowLongWhite
   parent: BasePillow
   name: long white pillow
-  description: used for long snoozes
+  description: Used for long snoozes. #triad grammar
   components:
   - type: Item
     heldPrefix: whitepillow
@@ -79,7 +79,7 @@
   id: PillowLumpBlue
   parent: BasePillow
   name: lumpy blue pillow
-  description: comfy
+  description: Comfy. #triad grammar
   components:
   - type: Item
     heldPrefix: bluepillow
@@ -91,7 +91,7 @@
   id: PillowLumpRed
   parent: BasePillow
   name: lumpy red pillow
-  description: comfy
+  description: Comfy. #triad grammar
   components:
   - type: Item
     heldPrefix: redpillow
@@ -103,7 +103,7 @@
   id: PillowLumpWhite
   parent: BasePillow
   name: lumpy white pillow
-  description: comfy
+  description: Comfy. #triad grammar
   components:
   - type: Item
     heldPrefix: whitepillow
@@ -115,7 +115,7 @@
   id: PillowSmallBlue
   parent: BasePillow
   name: small blue pillow
-  description: comfy but small
+  description: Comfy but small. #triad grammar
   components:
   - type: Item
     heldPrefix: bluepillow
@@ -127,7 +127,7 @@
   id: PillowSmallRed
   parent: BasePillow
   name: small red pillow
-  description: comfy but small
+  description: Comfy but small. #triad grammar
   components:
   - type: Item
     heldPrefix: redpillow
@@ -139,7 +139,7 @@
   id: PillowSmallWhite
   parent: BasePillow
   name: small white pillow
-  description: comfy but small
+  description: Comfy but small. #triad grammar
   components:
   - type: Item
     heldPrefix: whitepillow
@@ -150,8 +150,8 @@
 - type: entity
   id: PillowSquareBlue
   parent: BasePillow
-  name: square blue pillow
-  description: comfy but square
+  name: Square blue pillow #triad grammar
+  description: Comfy but square. #triad grammar
   components:
   - type: Item
     heldPrefix: bluepillow
@@ -163,7 +163,7 @@
   id: PillowSquareRed
   parent: BasePillow
   name: square red pillow
-  description: comfy but square
+  description: Comfy but square. #triad grammar
   components:
   - type: Item
     heldPrefix: redpillow
@@ -175,7 +175,7 @@
   id: PillowSquareWhite
   parent: BasePillow
   name: square white pillow
-  description: comfy but square
+  description: Comfy but square. #triad grammar
   components:
   - type: Item
     heldPrefix: whitepillow
@@ -189,7 +189,7 @@
   id: PillowLove
   parent: BasePillow
   name: love pillow
-  description: lovely dreams
+  description: Lovely dreams. #triad grammar
   components:
   - type: Item
     heldPrefix: redpillow
@@ -201,7 +201,7 @@
   id: PillowPawPrint
   parent: BasePillow
   name: paw print pillow
-  description: Imagine if this paw stepped on you, instead of the pillow.
+  description: Comfy, with a paw on it. #triad changed description from "Imagine if this paw stepped on you, instead of the pillow."
   components:
   - type: Item
     heldPrefix: bluepillow
@@ -210,10 +210,10 @@
     state: pillow_paw_print
 
 - type: entity
-  id: PillowReigalRed
+  id: PillowRegalRed #Triad grammar reigal>regal
   parent: BasePillow
-  name: reigal red pillow
-  description: snooze like royalty
+  name: regal red pillow
+  description: Snooze like royalty.
   components:
   - type: Item
     heldPrefix: redpillow
@@ -222,10 +222,10 @@
     state: pillow_reigal_red
 
 - type: entity
-  id: PillowStarbirst
+  id: PillowStarburst  #Triad Grammar starbirst>starbusrt
   parent: BasePillow
-  name: starbirst pillow
-  description: smells like blue raspberry candy
+  name: starburst pillow
+  description: Smells like blue raspberry candy. #Triad grammar
   components:
   - type: Item
     heldPrefix: bluepillow
@@ -237,7 +237,7 @@
   id: PillowStiff
   parent: BasePillow
   name: stiff pillow
-  description: is this filled with rocks..?
+  description: Is this filled with rocks..? #Triad grammar
   components:
   - type: Item
     heldPrefix: whitepillow
@@ -256,7 +256,7 @@
   id: PillowStiffLong
   parent: BasePillow
   name: stiff long pillow
-  description: is this filled with rocks..?
+  description: Is this filled with rocks..? #Triad grammar
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 180
@@ -275,7 +275,7 @@
   id: PillowStiffGreen
   parent: BasePillow
   name: stiff green pillow
-  description: is this filled with rocks..?
+  description: Is this filled with rocks..? #Triad grammar
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 180
@@ -294,7 +294,7 @@
   id: PillowStiffLongGreen
   parent: BasePillow
   name: stiff long green pillow
-  description: is this filled with rocks..?
+  description: Is this filled with rocks..? #Triad grammar
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 180
@@ -313,7 +313,7 @@
   id: PillowWeh
   parent: BasePillow
   name: weh pillow
-  description: weh
+  description: Weh! #triad grammar
   components:
   - type: Item
     heldPrefix: greenpillow
@@ -347,7 +347,7 @@
   id: PillowBodyWeh
   parent: PillowBodyBase
   name: weh body pillow
-  description: weh
+  description: Weh! #triad grammar
   components:
   - type: Item
     heldPrefix: greenpillow
@@ -376,7 +376,7 @@
   id: PillowBodyMiku
   parent: PillowBodyBase
   name: performer body pillow
-  description: smells like leek
+  description: Smells like leek. #triad Grammar
   components:
   - type: Item
     heldPrefix: whitepillow

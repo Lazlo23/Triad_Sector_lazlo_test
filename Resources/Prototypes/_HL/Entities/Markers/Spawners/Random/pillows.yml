@@ -18,8 +18,8 @@
     children:
     - id: PillowLove
     - id: PillowPawPrint
-    - id: PillowReigalRed
-    - id: PillowStarbirst
+    - id: PillowRegalRed #Triad grammar reigal>regal
+    - id: PillowStarburst  #Triad Grammar starbirst>starbusrt
     - id: PillowStiff
     - id: PillowStiffLong
     - id: PillowStiffGreen
