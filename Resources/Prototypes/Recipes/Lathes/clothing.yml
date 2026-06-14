@@ -69,7 +69,7 @@
   completetime: 2
   materials:
     Cloth: 200
-
+#Hardlight start -pillows
 - type: latheRecipe
   abstract: true
   id: BasePillowRecipe
@@ -77,7 +77,7 @@
   - Pillows
   materials:
     Cloth: 500
-
+#Hardlight end
 ## Recipes
 
 # Jumpsuits/skirts
@@ -942,7 +942,7 @@
 
 
 
-# HL - Pillows
+# HardLight Start - Pillows
 - type: latheRecipe
   parent: BasePillowRecipe
   id: PillowLongWhite
@@ -992,4 +992,4 @@
   parent: BasePillowRecipe
   id: PillowSquareWhite
   result: PillowSquareWhite
-
+#Hardlight end
