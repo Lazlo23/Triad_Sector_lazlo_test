@@ -150,7 +150,7 @@
 - type: entity
   id: PillowSquareBlue
   parent: BasePillow
-  name: Square blue pillow #triad grammar
+  name: square blue pillow #triad grammar
   description: Comfy but square. #triad grammar
   components:
   - type: Item
